@@ -4,9 +4,17 @@ const getAll = () => {
   return http.get("/user/");
 };
 
+const getAllTag = () => {
+    return http.get("/tag/");
+  };
+
 const get = name => {
   return http.get(`/user/${name}`);
 };
+
+const getAllTagsOfUser = name => {
+    return http.get(`/tag/${name}`);
+  };
 
 const create = data => {
   return http.post("/user/add", data);
